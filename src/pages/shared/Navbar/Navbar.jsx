@@ -1,8 +1,15 @@
 /* eslint-disable no-unused-vars */
-import React from 'react';
+import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
+import { AuthContext } from '../../../provider/AuthProvider';
 
 const Navbar = () => {
+  const { user, logOut } = useContext(AuthContext)
+  const handleLogout = () => {
+    logOut()
+      .then()
+      .catch(error => console.log(error));
+  }
   return (
     <div className="navbar bg-base-100 mt-4">
       <div className="navbar-start">
@@ -29,12 +36,23 @@ const Navbar = () => {
         <li className='text-purple-800 font-semibold text-xl hover:text-orange-500'><Link to="/">Home</Link></li>
         <li className='text-purple-800 font-semibold text-xl hover:text-orange-500'><Link to="/instructor">Instructors</Link></li>
         <li className='text-purple-800 font-semibold text-xl hover:text-orange-500'><Link to="/classes">Classes</Link></li>
-        <li className='text-purple-800 font-semibold text-xl hover:text-orange-500'><Link to="/dashboard">Dashboard</Link></li>
+        {
+          user && <li className='text-purple-800 font-semibold text-xl hover:text-orange-500'><Link to="/dashboard">Dashboard</Link></li>
+        }
         </ul>
+        
       </div>
-      <div className="navbar-end">
-        <Link to="/login" className="btn">Login</Link>
-      </div>
+      {
+        user && <img className='ml-12 w-12 rounded-full ' src={user.photoURL} alt="" />
+      }
+      {
+        user ? <div className="navbar-end" onClick={handleLogout} >
+          <Link to="/" className="btn">LogOut</Link>
+        </div> : <div className="navbar-end" >
+          <Link to='/login' className="btn">LogIn</Link>
+        </div>
+
+      }
     </div>
   );
 };
