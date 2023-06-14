@@ -8,11 +8,9 @@ const ClassActivities = ({ item }) => {
         <div>
             
             <div className="card w-96 bg-base-100 shadow-xl">
-                <figure className="px-10 pt-10">
+                <figure className="px-10 pt-10 pb-10">
                     <img src={class_image} alt="Shoes" className="rounded-xl" />
-                </figure>
-                <p>{instructor_name}</p>
-                
+                </figure>     
             </div>
         </div>
     );
