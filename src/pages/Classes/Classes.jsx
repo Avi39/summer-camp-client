@@ -16,6 +16,7 @@ const Classes = () => {
     return (
         <div>
             <p className='text-5xl font-bold text-center text-red-600 bg-black p-4 mt-8 mb-4'>All Approved Classes</p>
+            <div className='lg:grid grid-cols-3 gap-4 mb-12'>
             {
                 allClasses.map(item =><ClassesDetails 
                 key={item._id}
@@ -24,6 +25,8 @@ const Classes = () => {
 
                 </ClassesDetails>)
             }
+            </div>
+            
         </div>
     );
 };
