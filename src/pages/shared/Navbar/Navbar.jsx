@@ -22,7 +22,7 @@ const Navbar = () => {
         <li className='text-purple-800 font-semibold text-xl hover:text-orange-500'><Link to="/instructor">Instructors</Link></li>
         <li className='text-purple-800 font-semibold text-xl hover:text-orange-500'><Link to="/classes">Classes</Link></li>
         {
-          user && <li className='text-purple-800 font-semibold text-xl hover:text-orange-500'><Link to="/dashboard">Dashboard</Link></li>
+          user && <li className='text-purple-800 font-semibold text-xl hover:text-orange-500'><Link to="/dashboard/mycart">Dashboard</Link></li>
         }
           </ul>
         </div>
@@ -34,7 +34,7 @@ const Navbar = () => {
         <li className='text-purple-800 font-semibold text-xl hover:text-orange-500'><Link to="/instructor">Instructors</Link></li>
         <li className='text-purple-800 font-semibold text-xl hover:text-orange-500'><Link to="/classes">Classes</Link></li>
         {
-          user && <li className='text-purple-800 font-semibold text-xl hover:text-orange-500'><Link to="/dashboard">Dashboard</Link></li>
+          user && <li className='text-purple-800 font-semibold text-xl hover:text-orange-500'><Link to="/dashboard/mycart">Dashboard</Link></li>
         }
         </ul>
         
