@@ -3,7 +3,7 @@
 import React from 'react';
 
 const ClassActivities = ({ item }) => {
-    const {class_image} = item;
+    const {class_image,instructor_name} = item;
     return (
         <div>
             
@@ -11,6 +11,7 @@ const ClassActivities = ({ item }) => {
                 <figure className="px-10 pt-10">
                     <img src={class_image} alt="Shoes" className="rounded-xl" />
                 </figure>
+                <p>{instructor_name}</p>
                 
             </div>
         </div>
