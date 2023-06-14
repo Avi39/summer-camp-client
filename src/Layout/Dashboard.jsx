@@ -19,7 +19,7 @@ const Dashboard = () => {
                 </div>
                 <div className="drawer-side">
                     <label htmlFor="my-drawer-2" className="drawer-overlay"></label>
-                    <ul className="menu p-4 w-80 h-full bg-orange-600 text-base-content">
+                    <ul className="menu p-4 w-80 h-full bg-slate-500 text-base-content">
                         {/* Sidebar content here */}
                         <li><NavLink to="/dashboard/reservation"><FaCalendarAlt></FaCalendarAlt>Reservation</NavLink></li>
                         <li><NavLink to="/dashboard/history"><FaWallet></FaWallet>Payment History</NavLink></li>
