@@ -9,7 +9,6 @@ import Instructor from "../pages/Instructor/Instructor";
 import Classes from "../pages/Classes/Classes";
 import Dashboard from "../Layout/Dashboard";
 import MyCart from "../pages/Dashboard/MyCart/MyCart";
-import PrivateRoute from "./PrivateRoute";
 import ManageClasses from "../pages/Dashboard/MyCart/ManageClasses/ManageClasses";
 import ManageUsers from "../pages/Dashboard/ManageUsers/ManageUsers";
 
@@ -42,7 +41,7 @@ import ManageUsers from "../pages/Dashboard/ManageUsers/ManageUsers";
     },
     {
       path:'dashboard',
-      element:<PrivateRoute><Dashboard></Dashboard></PrivateRoute>,
+      element:<Dashboard></Dashboard>,
       children:[
         {
           path:'mycart',
