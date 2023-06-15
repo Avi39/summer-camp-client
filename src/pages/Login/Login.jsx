@@ -48,16 +48,28 @@ const Login = () => {
             .then(result => {
                 const user = result.user;
                 console.log(user);
-                navigate(from, { replace: true });
-                Swal.fire({
-                    title: 'Login Successful !',
-                    showClass: {
-                      popup: 'animate__animated animate__fadeInDown'
+                const saveUser = {name: user.displayName , email: user.email}
+                fetch('http://localhost:5000/users',{
+                    method:'POST',
+                    headers:{
+                        'content-type':'application/json'
                     },
-                    hideClass: {
-                      popup: 'animate__animated animate__fadeOutUp'
-                    }
-                  })
+                    body: JSON.stringify(saveUser)
+                })
+                .then(res => res.json())
+                .then(() =>{
+                        navigate(from, { replace: true });
+                        Swal.fire({
+                            title: 'Login Successful !',
+                            showClass: {
+                              popup: 'animate__animated animate__fadeInDown'
+                            },
+                            hideClass: {
+                              popup: 'animate__animated animate__fadeOutUp'
+                            }
+                          })    
+                })   
+                
             })
             .catch(error => {
                 console.log(error);
