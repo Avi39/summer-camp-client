@@ -12,21 +12,22 @@ const Classes = () => {
                 const approveClass = data.filter(item => item.status === 'active');
                 setAllClasses(approveClass);
             })
-    },[])
+    }, [])
     return (
         <div>
-            <p className='text-5xl font-bold text-center text-red-600 bg-black p-4 mt-8 mb-4'>All Approved Classes</p>
+            <p className='text-5xl font-bold text-center text-red-600
+             bg-black p-4 mt-8 mb-4'>All Approved Classes</p>
             <div className='lg:grid grid-cols-3 gap-4 mb-12'>
-            {
-                allClasses.map(item =><ClassesDetails 
-                key={item._id}
-                item = {item}
-                >
+                {
+                    allClasses.map(item => <ClassesDetails
+                        key={item._id}
+                        item={item}
+                    >
 
-                </ClassesDetails>)
-            }
+                    </ClassesDetails>)
+                }
             </div>
-            
+
         </div>
     );
 };
