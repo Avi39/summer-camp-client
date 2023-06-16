@@ -29,6 +29,26 @@ const ManageClassesDetails = ({ item,refetch }) => {
             }
         })
     }
+
+    const handleMakeDenied = item =>{
+        fetch(`http://localhost:5000/users/adminDenied/${item._id}`,{
+            method:'PATCH'
+        })
+        .then(res => res.json())
+        .then(data =>{
+            console.log(data);
+            if(data.modifiedCount){
+                refetch();
+                Swal.fire({
+                    position: 'top-end',
+                    icon: 'success',
+                    title: `class is denied`,
+                    showConfirmButton: false,
+                    timer: 1500
+                  })
+            }
+        })
+    }
     return (
         <div className="card w-96 bg-base-100 shadow-xl ">
       <figure className="px-10 pt-10">
@@ -42,7 +62,7 @@ const ManageClassesDetails = ({ item,refetch }) => {
         <h2 className="card-title"><span className='text-red-500'>email: </span>{instructor_email}</h2>
         <h2 className="card-title"><span className='text-red-500'>Status: </span>{status}</h2>
         <div className="card-actions">
-          <button className="btn btn-primary">Pending</button>
+          <button onClick={()=>handleMakeDenied(item)} className="btn btn-primary">denied</button>
           <button onClick={()=>handleMakeActive(item)}  className="btn btn-warning">approved</button>
           <button className="btn btn-success">feedback</button>
         </div>
