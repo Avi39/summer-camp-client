@@ -50,7 +50,7 @@ const ManageClassesDetails = ({ item,refetch }) => {
         })
     }
     return (
-        <div className="card w-96 bg-base-100 shadow-xl ">
+        <div className="card w-fit bg-base-100 shadow-xl ">
       <figure className="px-10 pt-10">
         <img src={class_image} alt="Shoes" className="rounded-xl" />
       </figure>
@@ -59,11 +59,14 @@ const ManageClassesDetails = ({ item,refetch }) => {
         <h2 className="card-title"><span className='text-red-500'>Instructor Name:</span>{instructor_name}</h2>
         <h2 className="card-title"><span className='text-red-500'>Available Seat:</span>{available_seats}</h2>
         <h2 className="card-title"><span className='text-red-500'>Price: </span>{price}</h2>
-        <h2 className="card-title"><span className='text-red-500'>email: </span>{instructor_email}</h2>
+        <h2 className="card-title"><span className='text-red-500'>Instructor_email: </span>{instructor_email}</h2>
         <h2 className="card-title"><span className='text-red-500'>Status: </span>{status}</h2>
         <div className="card-actions">
-          <button onClick={()=>handleMakeDenied(item)} className="btn btn-primary">denied</button>
-          <button onClick={()=>handleMakeActive(item)}  className="btn btn-warning">approved</button>
+            {
+                status === 'active'?<><button onClick={()=>handleMakeDenied(item)} className="btn btn-disabled">denied</button>  <button onClick={()=>handleMakeActive(item)}  className="btn  btn-disabled">approved</button></>: status === 'denied'?<><button onClick={()=>handleMakeDenied(item)} className="btn btn-disabled">denied</button>  <button onClick={()=>handleMakeActive(item)} className="btn  btn-disabled">approved</button></>:
+                <><button onClick={()=>handleMakeDenied(item)} className="btn btn-primary">denied</button> <button onClick={()=>handleMakeActive(item)}className="btn btn-warning">approved</button></> 
+            }
+          
           <button className="btn btn-success">feedback</button>
         </div>
       </div>
