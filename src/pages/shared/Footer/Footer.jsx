@@ -1,6 +1,6 @@
 /* eslint-disable no-unused-vars */
 import React from 'react';
-
+import icon from '../../../assets/152066-200 (1).ico'
 const Footer = () => {
     return (
         <footer className="footer p-10 mb-0 bg-neutral text-neutral-content sm:grid grid-cols-3">
@@ -13,7 +13,7 @@ const Footer = () => {
   </div> 
   <div>
     <span className="footer-title">Company</span> 
-    <img src="" width="35px" alt="" />
+    <img src={icon} width="35px" alt="" />
     <a className="link link-hover">About us</a> 
     <a className="link link-hover">Contact</a> 
   </div> 
