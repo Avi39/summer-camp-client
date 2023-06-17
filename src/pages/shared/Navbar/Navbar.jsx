@@ -29,7 +29,7 @@ const Navbar = () => {
         <img src={icon} alt="" />
         <a className="btn btn-ghost normal-case text-xl text-red-500 font-serif">CAmP WitH MARTIAL</a>
       </div>
-      <div className="navbar-center hidden lg:flex">
+      <div className="navbar-center hidden ml-24 lg:flex">
         <ul className="menu menu-horizontal px-1">
           <li className='text-purple-800 font-semibold text-xl hover:text-orange-500'><Link to="/">Home</Link></li>
           <li className='text-purple-800 font-semibold text-xl hover:text-orange-500'><Link to="/instructor">Instructors</Link></li>
