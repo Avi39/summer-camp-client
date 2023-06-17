@@ -5,6 +5,8 @@ import { FaTrashAlt } from 'react-icons/fa';
 import Swal from 'sweetalert2';
 import { data } from 'autoprefixer';
 import useAuth from '../../../hooks/useAuth';
+import Lottie from "lottie-react";
+import animation from '../../../assets/23187-kick.json'
 
 const MyCart = () => {
     const [cart,refetch] = useCart();
@@ -42,7 +44,10 @@ const MyCart = () => {
           })
     }
     return (
-        <div>
+        <div className='mb-12'>
+             <div className='w-96 mx-auto'>
+                <Lottie animationData={animation} loop={true}></Lottie>
+            </div>
             <div className="overflow-x-auto">
                 <table className="table">
                     {/* head */}
