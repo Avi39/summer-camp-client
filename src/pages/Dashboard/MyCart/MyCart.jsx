@@ -4,9 +4,14 @@ import useCart from '../../../hooks/useCart';
 import { FaTrashAlt } from 'react-icons/fa';
 import Swal from 'sweetalert2';
 import { data } from 'autoprefixer';
+import useAuth from '../../../hooks/useAuth';
 
 const MyCart = () => {
     const [cart,refetch] = useCart();
+    const {loading} = useAuth();
+    // if(loading){
+    //     return <progress className="progress w-56"></progress>
+    // }
     const handleDelete = item =>{
         Swal.fire({
             title: 'Are you sure?',

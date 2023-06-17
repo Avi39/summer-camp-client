@@ -10,7 +10,7 @@ const ExtraSection = () => {
             <p className='text-5xl mt-12 mb-12 font-semibold bg-slate-900 h-[100px] text-center text-white p-4'>Activities</p>
             <div className='grid grid-cols-3'>
             <div className='w-96'>
-                <Lottie animationData={animation} loop={true}></Lottie>
+                <Lottie animationData={animation} loop={true}></Lottie> 
             </div>
             <div className='w-96'>
                 <Lottie animationData={animation2} loop={true}></Lottie>
@@ -18,7 +18,6 @@ const ExtraSection = () => {
             <div className='w-96'>
                 <Lottie animationData={animation3} loop={true}></Lottie>
             </div>
-            
         </div>
         </div>
         
