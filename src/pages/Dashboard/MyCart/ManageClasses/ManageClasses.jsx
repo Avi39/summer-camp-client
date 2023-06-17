@@ -17,7 +17,7 @@ const ManageClasses = () => {
     return (
         <div>
             <p className='text-2xl font-bold text-center
-              p-4 mt-8 mb-4 bg-slate-500 ml-12 '>All Classes</p>
+              p-4 mt-8 mb-4 bg-slate-500 ml-12'>All Classes</p>
              <div className='lg:grid grid-cols-2 gap-20'>
             {
                 classes.map(item =><ManageClassesDetails

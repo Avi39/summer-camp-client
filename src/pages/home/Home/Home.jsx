@@ -3,6 +3,7 @@ import React from 'react';
 import Banner from '../banner/Banner';
 import TopClasses from '../TopClasses/TopClasses';
 import TopInstructor from '../TopInstructor/TopInstructor';
+import ExtraSection from '../Extra_section/ExtraSection';
 
 const Home = () => {
     return (
@@ -10,6 +11,7 @@ const Home = () => {
          <Banner></Banner>
          <TopClasses></TopClasses>
          <TopInstructor></TopInstructor>
+         <ExtraSection></ExtraSection>
         </div>
     );    
 };
