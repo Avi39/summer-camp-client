@@ -6,7 +6,7 @@ import ClassesDetails from './ClassesDetails';
 const Classes = () => {
     const [allClasses, setAllClasses] = useState([]);
     useEffect(() => {
-        fetch('http://localhost:5000/allClasses')
+        fetch('https://assignment-tweleve-server.vercel.app/allClasses')
             .then(res => res.json())
             .then(data => {
                 const approveClass = data.filter(item => item.status === 'active');

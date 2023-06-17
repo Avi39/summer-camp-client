@@ -11,7 +11,7 @@ const ManageClassesDetails = ({ item,refetch }) => {
 
 
     const handleMakeActive = item =>{
-        fetch(`http://localhost:5000/users/adminApprove/${item._id}`,{
+        fetch(`https://assignment-tweleve-server.vercel.app/users/adminApprove/${item._id}`,{
             method:'PATCH'
         })
         .then(res => res.json())
@@ -31,7 +31,7 @@ const ManageClassesDetails = ({ item,refetch }) => {
     }
 
     const handleMakeDenied = item =>{
-        fetch(`http://localhost:5000/users/adminDenied/${item._id}`,{
+        fetch(`https://assignment-tweleve-server.vercel.app/users/adminDenied/${item._id}`,{
             method:'PATCH'
         })
         .then(res => res.json())

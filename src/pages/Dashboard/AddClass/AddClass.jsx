@@ -28,7 +28,7 @@ const AddClass = () => {
         }
         console.log(add);
 
-        fetch('http://localhost:5000/addClass', {
+        fetch('https://assignment-tweleve-server.vercel.app/addClass', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'

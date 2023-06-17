@@ -11,7 +11,7 @@ const useCart = () => {
     const { refetch, data: cart = []} = useQuery({
         queryKey: ['carts',user?.email],
         // queryFn: async ()=>{
-        //     const res = await fetch(`http://localhost:5000/carts?user_email=${user?.email}`,{headers: {
+        //     const res = await fetch(`https://assignment-tweleve-server.vercel.app/carts?user_email=${user?.email}`,{headers: {
         //         authorization: `bearer ${token}`
         //     }})
         //     return res.json();

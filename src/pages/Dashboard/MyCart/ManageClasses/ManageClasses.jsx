@@ -6,12 +6,12 @@ import { useQuery } from '@tanstack/react-query';
 const ManageClasses = () => {
     // const [allClasses, setAllClasses] = useState([]);
     // useEffect(() => {
-    //     fetch('http://localhost:5000/allClasses')
+    //     fetch('https://assignment-tweleve-server.vercel.app/allClasses')
     //         .then(res => res.json())
     //         .then(data =>setAllClasses(data))
     // },[])
     const { data: classes = [], refetch } = useQuery(['classes'], async () => {
-        const res = await fetch('http://localhost:5000/allClasses')
+        const res = await fetch('https://assignment-tweleve-server.vercel.app/allClasses')
         return res.json();
     })
     return (

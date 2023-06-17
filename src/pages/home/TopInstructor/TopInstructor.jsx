@@ -5,7 +5,7 @@ import InstructorDetails from './InstructorDetails';
 const TopInstructor = () => {
     const [Instructor, setInstructor] = useState([]);
     useEffect(() => {
-        fetch('http://localhost:5000/classes')
+        fetch('https://assignment-tweleve-server.vercel.app/classes')
             .then(res => res.json())
             .then(data => setInstructor(data))
     },[])

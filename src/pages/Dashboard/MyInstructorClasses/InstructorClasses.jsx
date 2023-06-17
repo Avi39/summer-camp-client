@@ -6,7 +6,7 @@ const InstructorClasses = () => {
     const { user } = useAuth();
     const [InstructorClasses, setInstructorClasses] = useState([]);
 
-    const url = `http://localhost:5000/addClass?email=${user?.email}`;
+    const url = `https://assignment-tweleve-server.vercel.app/addClass?email=${user?.email}`;
     useEffect(() => {
         fetch(url)
             .then(res => res.json())

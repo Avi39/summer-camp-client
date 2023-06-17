@@ -15,7 +15,7 @@ const ClassesDetails = ({ item }) => {
     console.log(item);
     if (user && user.email) {
       const cartItem = {class_id:_id,marshal_class_name,class_image,instructor_name,available_seats,price,user_email:user?.email}
-      fetch('http://localhost:5000/carts',{
+      fetch('https://assignment-tweleve-server.vercel.app/carts',{
         method:'POST',
         headers:{
           'content-type':'application/json'
