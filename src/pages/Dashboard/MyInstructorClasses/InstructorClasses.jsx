@@ -6,7 +6,7 @@ const InstructorClasses = () => {
     const { user } = useAuth();
     const [InstructorClasses, setInstructorClasses] = useState([]);
 
-    const url = `http://localhost:5000/addClass?email=${user.email}`;
+    const url = `http://localhost:5000/addClass?email=${user?.email}`;
     useEffect(() => {
         fetch(url)
             .then(res => res.json())
@@ -56,7 +56,7 @@ const InstructorClasses = () => {
                             <td>{user.price}</td>
                             <td>{user.status}</td>
                             <td className='text-center'>{user.student_number}</td>
-                            <td><button className="btn btn-xs  btn-warning">feedback</button></td>
+                            <td><button className="btn btn-sm text-xs  btn-warning">see feedback</button></td>
                             <td>
                                 <button className="btn btn-xs btn-success">update</button>
                             </td>

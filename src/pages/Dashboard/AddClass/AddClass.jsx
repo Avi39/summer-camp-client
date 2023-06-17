@@ -2,7 +2,6 @@
 import React from 'react';
 import useAuth from '../../../hooks/useAuth';
 import Swal from 'sweetalert2';
-
 const AddClass = () => {
     const { user } = useAuth()
 
@@ -51,7 +50,7 @@ const AddClass = () => {
             })
     }
     return (
-        <div>
+        <div>  
             <p className='text-4xl font-bold mb-8 text-center '>Add a New Class</p>
             <form onSubmit={handleAddClass}>
                 <div className='lg:grid grid-cols-3 gap-8'>
