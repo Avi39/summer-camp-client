@@ -12,6 +12,7 @@ const MyCart = () => {
     // if(loading){
     //     return <progress className="progress w-56"></progress>
     // }
+    // loading
     const handleDelete = item =>{
         Swal.fire({
             title: 'Are you sure?',
