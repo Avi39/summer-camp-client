@@ -15,15 +15,17 @@ const AddClass = () => {
         const instructor_email = user?.email;
         const seats = form.seats.value;
         const price = form.price.value;
+        const instructor_image = form.instructor_image.value;
         const add = {
             marshal_class_name: class_name,
             class_image: class_image,
             instructor_name: instructor_name,
             instructor_email: instructor_email,
+            instructor_image: instructor_image,
             available_seats: seats,
             price: price,
             status: 'pending',
-            student_number: '20'
+            student_number: 20
         }
         console.log(add);
 
@@ -63,7 +65,7 @@ const AddClass = () => {
                         <label className="label">
                             <span className=" text-lg font-semibold">Class Image</span>
                         </label>
-                        <input type="text" name='class_image' placeholder="class image" className="input input-bordered w-full max-w-xs" />
+                        <input type="text" name='class_image' placeholder="give image url" className="input input-bordered w-full max-w-xs" />
                     </div>
                     <div className="form-control w-full max-w-xs">
                         <label className="label">
@@ -88,6 +90,12 @@ const AddClass = () => {
                             <span className=" text-lg font-semibold">Price</span>
                         </label>
                         <input type="number" name='price' placeholder="price" className="input input-bordered w-full max-w-xs" />
+                    </div>
+                    <div className="form-control w-full max-w-xs">
+                        <label className="label">
+                            <span className=" text-lg font-semibold">Instructor image</span>
+                        </label>
+                        <input type="text" name='instructor_image' placeholder="give image url" className="input input-bordered w-full max-w-xs" />
                     </div>
                 </div>
                 <input type="submit" value="Add Class" className='btn btn-primary btn-block ml-2 mt-6' />
