@@ -7,6 +7,7 @@ import { data } from 'autoprefixer';
 import useAuth from '../../../hooks/useAuth';
 import Lottie from "lottie-react";
 import animation from '../../../assets/23187-kick.json'
+import { Link } from 'react-router-dom';
 
 const MyCart = () => {
     const [cart,refetch] = useCart();
@@ -85,7 +86,7 @@ const MyCart = () => {
                                 <td className='text-center'>{row.available_seats}</td>
                                 <td className='text-center'>${row.price}</td>
                                 <td>
-                                    <button className="btn btn-ghost bg-yellow-500 ">pay</button>
+                                    <Link to={`/dashboard/payment/${row._id}`}><button className="btn btn-ghost bg-yellow-500">pay</button></Link>
                                 </td>
                                 <td>
                                     <button onClick={()=>handleDelete(row)} className="btn btn-ghost bg-red-600 text-white"><FaTrashAlt></FaTrashAlt></button>

@@ -14,6 +14,7 @@ import ManageUsers from "../pages/Dashboard/ManageUsers/ManageUsers";
 import InstructorClasses from "../pages/Dashboard/MyInstructorClasses/InstructorClasses";
 import AddClass from "../pages/Dashboard/AddClass/AddClass";
 import Error from "../pages/Error/Error";
+import Payment from "../pages/Dashboard/Payment/Payment";
 
   export const router = createBrowserRouter([
     {
@@ -66,6 +67,10 @@ import Error from "../pages/Error/Error";
         {
           path:'instructorClasses',
           element:<InstructorClasses></InstructorClasses>
+        },
+        {
+          path:'payment/:id',
+          element:<Payment></Payment>
         }
       ]
     }
