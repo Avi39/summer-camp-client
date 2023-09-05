@@ -1,7 +1,6 @@
 /* eslint-disable no-unused-vars */
 import React, { useEffect, useState } from 'react';
 import useAuth from '../../../hooks/useAuth';
-
 const Enrolledclass = () => {
     const [enrolled,setEnrolled] = useState([]);
     const {user} = useAuth();
