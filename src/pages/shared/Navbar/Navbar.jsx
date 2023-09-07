@@ -3,6 +3,7 @@ import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
 import { AuthContext } from '../../../provider/AuthProvider';
 import icon from '../../../assets/152066-200 (1).ico'
+import { Container } from 'postcss';
 const Navbar = () => {
   const { user, logOut } = useContext(AuthContext)
   const handleLogout = () => {
@@ -11,7 +12,8 @@ const Navbar = () => {
       .catch(error => console.log(error));
   }
   return (
-    <div className="navbar bg-base-100 mt-4">
+    <div>
+      <div className="navbar bg-base-100 mt-4">
       <div className="navbar-start">
         <div className="dropdown">
           <label tabIndex={0} className="btn btn-ghost lg:hidden">
@@ -29,7 +31,7 @@ const Navbar = () => {
         <img src={icon} alt="" />
         <a className="btn btn-ghost normal-case text-xl text-red-500 font-serif">CAmP WitH MARTIAL</a>
       </div>
-      <div className="navbar-center hidden ml-24 lg:flex">
+      <div className="navbar-center hidden ml-14 lg:flex">
         <ul className="menu menu-horizontal px-1">
           <li className='text-purple-800 font-semibold text-xl hover:text-orange-500'><Link to="/">Home</Link></li>
           <li className='text-purple-800 font-semibold text-xl hover:text-orange-500'><Link to="/instructor">Instructors</Link></li>
@@ -52,6 +54,9 @@ const Navbar = () => {
 
       }
     </div>
+     
+    </div>
+    
   );
 };
 

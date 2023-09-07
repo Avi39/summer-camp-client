@@ -5,6 +5,7 @@ import TopClasses from '../TopClasses/TopClasses';
 import TopInstructor from '../TopInstructor/TopInstructor';
 import ExtraSection from '../Extra_section/ExtraSection';
 import Contact from '../../ContactUs/Contact';
+import ParentSay from '../parent_say/ParentSay';
 
 const Home = () => {
     return (
@@ -13,6 +14,7 @@ const Home = () => {
          <TopClasses></TopClasses>
          <TopInstructor></TopInstructor>
          <ExtraSection></ExtraSection>
+         <ParentSay></ParentSay>
          <Contact></Contact>
         </div>
     );    

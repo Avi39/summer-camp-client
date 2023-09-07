@@ -7,7 +7,7 @@ import animation3 from '../../../assets/26352-kungfu.json'
 const ExtraSection = () => {
     return (
         <div>
-            <p className='text-5xl mt-12 mb-12 font-semibold bg-slate-900 h-[100px] text-center text-white p-4'>Activities</p>
+            <p className='text-5xl mt-12 mb-12 font-semibold bg-slate-900 h-[100px] text-center text-white p-4 w-11/12 ml-16'>Activities</p>
             <div className='grid grid-cols-3'>
             <div className='w-96'>
                 <Lottie animationData={animation} loop={true}></Lottie> 

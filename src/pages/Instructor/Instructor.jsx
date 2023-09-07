@@ -11,8 +11,8 @@ const Instructor = () => {
     },[])
     return (
         <div>
-            <p className='text-5xl font-bold text-center text-red-600 bg-black p-4 mt-8 mb-4'>All Instructors</p>
-             <div className='lg:grid grid-cols-3 gap-4 mb-12'>
+            <p className='text-5xl font-bold text-center text-red-600 bg-black p-4 mt-8 mb-4 w-11/12 ml-16'>All Instructors</p>
+             <div className='lg:grid grid-cols-3 gap-4 mb-12 ml-20'>
             {
                     AllInstructors.map(item=><AllInstructor
                      key={item._id}

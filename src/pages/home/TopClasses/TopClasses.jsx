@@ -11,8 +11,8 @@ const TopClasses = () => {
     },[])
     return (
         <div>
-            <p className='text-5xl mt-12 mb-12 font-semibold bg-slate-900 h-[100px] text-center text-white p-4'>Top Classes</p>
-            <div className='lg:grid grid-cols-3 gap-4 mb-12'>
+            <p className='text-5xl mt-12 mb-12 font-semibold bg-slate-900 h-[100px] text-center text-white p-4 w-11/12 ml-16'>Top Classes</p>
+            <div className='lg:grid grid-cols-3 gap-4 mb-12 ml-20'>
             {
                     classes.map(item=><ClassActivities
                      key={item._id}
