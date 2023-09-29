@@ -28,7 +28,7 @@ const Navbar = () => {
             }
           </ul>
         </div>
-        <img src={icon} alt="" />
+        <img src={icon} alt="" className='ml-8'/>
         <a className="btn btn-ghost normal-case text-xl text-red-500 font-serif">CAmP WitH MARTIAL</a>
       </div>
       <div className="navbar-center hidden ml-14 lg:flex">
@@ -46,9 +46,9 @@ const Navbar = () => {
         user && <img className='ml-12 w-12 rounded-full ' src={user.photoURL} alt="" />
       }
       {
-        user ? <div className="navbar-end" onClick={handleLogout} >
+        user ? <div className="navbar-end mr-14" onClick={handleLogout} >
           <Link to="/" className="btn">LogOut</Link>
-        </div> : <div className="navbar-end" >
+        </div> : <div className="navbar-end mr-14" >
           <Link to='/login' className="btn">LogIn</Link>
         </div>
 
